@@ -13,6 +13,8 @@ def file_read(fname):
     content_array = []
     with open(fname) as f:
         for line in f:
+            if len(line.split()) == 0:
+                continue
             line = line.strip()
             line = line.replace(' ', '')
             content_array.append(line)
@@ -25,12 +27,19 @@ if command.r:
     array.sort(reverse=True)
     #sort in reverse length
     array.sort(key=len, reverse=True)
+    with open("Output Reverse Text.txt", 'w') as f:
+        f.writelines('\n'.join(array))
+    print("The list of sorted names has been added to a file called 'Output Reverse Text.txt' in the current working directory.")
+    
 else:
 #    #sort by alphabet
     array.sort()
 #    #sort by length
     array = sorted(array,key=len)
-for name in array:
-    print(name)
+    with open("Output Text.txt", 'w') as f:
+        f.writelines('\n'.join(array))
+        print("The list of sorted names has been added to a file called 'Output Text.txt' in the current working directory.")
+#for name in array:
+    #print(name)
 #wait for user to end program
-input("Press enter to exit")
+#input("Press enter to exit")
