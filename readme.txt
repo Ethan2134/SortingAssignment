@@ -8,7 +8,8 @@ reverse sort will be added to 'Output Reverse Text.txt'. Test cases have been ad
 or false, depending on if the actual output matches the expected output. The expected output for a normal sort is 
 in a text file called 'Sorted Text.txt', and the expected output for a reverse sort is in 'Sorted Reverse Text.txt'.
 After each sort, the outputs will be overwritten, and any information in the file will be lost. By adding a new name
-to 'Sort Me.txt', the test cases will fail unless the expected output files are updated as well, and vice versa.
+to 'Sort Me.txt', the test cases will fail unless the expected output files are updated as well, and vice versa. Another test
+file, 'test2.py', was added for use in GitHub actions to test if any change to the code has broken the program.
 
 
 To run the script, navigate to the directory that contains the script from the command line. Run the following command
